@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const CountriesData = (props) => {
-  return <h2>Countries Data</h2>
-};
+class CountriesData extends Component {
+  render() {
+    return <h2>Countries Data</h2>
+  }
+}
 
 export default CountriesData;
