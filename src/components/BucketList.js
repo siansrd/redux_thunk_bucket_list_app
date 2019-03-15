@@ -22,6 +22,7 @@ class BucketList extends Component {
   }
 
   render() {
+    if (this.props.listItems.length === 0) return <h5>Nothing in your list</h5>
     return <ul>{ this.createListItems() }</ul>
   }
 
