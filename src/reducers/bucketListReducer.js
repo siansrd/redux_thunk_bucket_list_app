@@ -1,5 +1,10 @@
 const bucketListReducer = (state = [], action) => {
-  return state
+  switch(action.type){
+    case 'ADD_COUNTRY':
+      return [...state, action.country]
+    default:
+      return state;
+  }
 }
 
 export default bucketListReducer;
