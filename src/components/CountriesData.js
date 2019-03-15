@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getCountriesData } from '../actions/countriesDataActions.js';
 import { connect } from 'react-redux';
+import CountriesSelect from './CountriesSelect';
 
 class CountriesData extends Component {
 
@@ -9,7 +10,7 @@ class CountriesData extends Component {
   }
 
   render() {
-    return <h2>Countries Data</h2>
+    return <CountriesSelect />
   }
 }
 
