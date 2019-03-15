@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BucketListItem from './BucketListItem.js';
 import { toggleVisitedStatus } from '../actions/bucketListActions';
+import './BucketList.css';
 
 class BucketList extends Component {
 
@@ -23,7 +24,7 @@ class BucketList extends Component {
 
   render() {
     if (this.props.listItems.length === 0) return <h5>Nothing in your list</h5>
-    return <ul>{ this.createListItems() }</ul>
+    return <ul className="bucket-list">{ this.createListItems() }</ul>
   }
 
 }
