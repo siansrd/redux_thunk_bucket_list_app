@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
-const Select = ({countries}) => {
-  const options = countries.map(country => {
-    return <option value={country.name}>{country.name}</option>
-  })
+class Select extends Component {
 
-  return (
-    <select>{ options }</select>
-  )
+  createOptions() {
+    return this.props.countries.map(country => {
+      return <option value={country.name}>{country.name}</option>
+    })
+  }
+
+  render() {
+    return <select>{ this.createOptions() }</select>
+  }
+
 }
 
 const mapStateToProps = state => {
