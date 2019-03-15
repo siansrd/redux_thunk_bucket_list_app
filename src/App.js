@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CountriesData from './components/CountriesData.js';
-import BucketList from './components/BucketList.js'
+import BucketList from './components/BucketList.js';
+import BucketLists from './components/BucketLists.js';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <h1>Bucket List App</h1>
         <CountriesData />
         <BucketList />
+        <BucketLists />
       </>
     );
   }
