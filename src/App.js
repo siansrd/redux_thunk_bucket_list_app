@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>Bucket List App</h1>
+        <h1>Bucket List</h1>
         <h3>All the places you want to go before you die</h3>
         <CountriesData />
         <BucketLists />
