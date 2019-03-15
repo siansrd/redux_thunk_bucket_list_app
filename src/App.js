@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CountriesData from './components/CountriesData.js';
-import BucketLists from './components/BucketLists.js';
+import CountriesData from './containers/CountriesData.js';
+import BucketLists from './containers/BucketLists.js';
 
 class App extends Component {
   render() {
