@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Select from './Select';
 
 class CountriesData extends Component {
-
   componentDidMount() {
     this.props.onPageLoad();
   }
