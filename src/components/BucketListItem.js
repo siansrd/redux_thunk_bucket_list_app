@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { toggleVisitedStatus } from '../actions/bucketListActions';
 
 class BucketListItem extends Component {
 
@@ -26,8 +27,8 @@ class BucketListItem extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  visitedStatusChanged() {
-    debugger
+  visitedStatusChanged(countryName) {
+    dispatch(toggleVisitedStatus(countryName))
   }
 })
 
