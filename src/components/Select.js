@@ -23,7 +23,7 @@ class Select extends Component {
 
 const mapDispatchToProps = dispatch => ({
   countrySelected(countryName) {
-    dispatch(addToBucketList(countryName))
+    dispatch(addToBucketList({name: countryName, visited: false}))
   }
 })
 

@@ -10,7 +10,7 @@ class BucketList extends Component {
 
   createListItems() {
     return this.props.bucketList.map(country => {
-      return <li>{country}</li>
+      return <li>{country.name}</li>
     })
   }
 
