@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import BucketListItem from './BucketListItem.js';
 
 class BucketList extends Component {
 
@@ -10,7 +11,7 @@ class BucketList extends Component {
 
   createListItems() {
     return this.props.bucketList.map(country => {
-      return <li>{country.name}</li>
+      return <BucketListItem country={ country } />
     })
   }
 
