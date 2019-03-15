@@ -12,7 +12,7 @@ class BucketList extends Component {
   }
 
   createListItems() {
-    return this.props.bucketList.map(country => {
+    return this.props.listItems.map(country => {
       return <BucketListItem country={ country } onCheck={ this.visitedStatusChange } />
     })
   }
@@ -33,10 +33,4 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-const mapStateToProps = (state) => {
-  return {
-    bucketList: state.bucketList
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BucketList);
+export default connect(null, mapDispatchToProps)(BucketList);

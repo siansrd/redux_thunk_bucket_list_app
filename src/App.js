@@ -9,7 +9,6 @@ class App extends Component {
       <>
         <h1>Bucket List App</h1>
         <CountriesData />
-        <BucketList />
         <BucketLists />
       </>
     );
