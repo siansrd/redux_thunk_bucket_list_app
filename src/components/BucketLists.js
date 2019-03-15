@@ -13,7 +13,9 @@ class BucketLists extends Component {
     const notVisited = this.filterListByVisted(false);
 
     return <>
+      <h2>Not Visited</h2>
       <BucketList listItems={ notVisited } />
+      <h2>Visited</h2>
       <BucketList listItems={ visited } />
     </>
   }
