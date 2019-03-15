@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { stringify } from 'querystring';
+import { connect } from 'react-redux';
 
-class Country extends Component {
+class BucketListItem extends Component {
+
+  visitedStatusChanged(evt) {
+    const name = evt.target.id;
+    this.props.visitedStatusChanged(name);
+  }
 
   render() {
     const { name, visited } = this.props.country
@@ -9,10 +14,21 @@ class Country extends Component {
     return (
       <li>
         <p>{ name }</p>
-        <p>{ visited.toString() }</p>
+        <input 
+          type="checkbox" 
+          checked={ visited }
+          id={ name }
+          onChange={ evt => this.visitedStatusChanged(evt) } 
+        />
       </li>
     )
   }
 }
 
-export default Country
+const mapDispatchToProps = dispatch => ({
+  visitedStatusChanged() {
+    debugger
+  }
+})
+
+export default connect(null, mapDispatchToProps)(BucketListItem)
