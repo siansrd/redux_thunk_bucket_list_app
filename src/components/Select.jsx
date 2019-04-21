@@ -8,7 +8,7 @@ const Select = (props) => {
 
   const handleChange = (evt) => {
     const country = evt.target.value;
-    setSelected(country)
+    setSelected(country);
     props.countrySelected(country);
   };
 
