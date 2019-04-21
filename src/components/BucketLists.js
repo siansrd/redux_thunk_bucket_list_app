@@ -4,19 +4,13 @@ import BucketList from './BucketList.js';
 
 class BucketLists extends Component {
 
-  filterListByVisted(status) {
-    return this.props.bucketList.filter(item => item.visited === status)
-  }
-
   render() {
-    const visited = this.filterListByVisted(true);
-    const notVisited = this.filterListByVisted(false);
-
+  
     return <>
       <h2>Still to Visit</h2>
-      <BucketList listItems={ notVisited } />
+      <BucketList listItems={ this.props.notVisited } />
       <h2>Visited</h2>
-      <BucketList listItems={ visited } />
+      <BucketList listItems={ this.props.visited } />
     </>
   }
 
@@ -24,7 +18,8 @@ class BucketLists extends Component {
 
 const mapStateToProps = state => {
   return {
-    bucketList: state.bucketList
+    visited: state.bucketList.filter(item => item.visited === true),
+    notVisited: state.bucketList.filter(item => item.visited === false)
   }
 };
 
