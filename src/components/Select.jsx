@@ -33,4 +33,4 @@ const mapDispatchToProps = dispatch => ({
   },
 });
 
-export default connect(null, mapDispatchToProps)(Select)
+export default connect(null, mapDispatchToProps)(Select);
