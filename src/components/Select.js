@@ -1,23 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addToBucketList } from '../actions/bucketListActions.js';
 
-class Select extends Component {
+const Select = (props) => {
 
-  handleChange(evt) {
-    const country = evt.target.value;
-    this.props.countrySelected(country);
+  const [selected, setSelected] = useState("")
+
+  const handleChange = (evt) => {
+    const country = evt.target.value
+    setSelected(country)
+    props.countrySelected(country)
   }
 
-  createOptions() {
-    return this.props.countries.map(country => {
-      return <option value={country.name}>{country.name}</option>
+  const options = () => {
+    return props.countries.map((country, index) => {
+      return <option value={country.name} key={index}>{country.name}</option>
     })
   }
 
-  render() {
-    return <select onChange={ evt => this.handleChange(evt) }>{ this.createOptions() }</select>
-  }
+  return (
+    <select onChange={ evt => handleChange(evt) } value={ selected }>
+      <option value="" selected disabled ></option>
+      { options() }
+    </select>
+  )
 
 }
 
@@ -33,4 +39,4 @@ const mapStateToProps = state => {
   }
 } 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Select);
+export default connect(mapStateToProps, mapDispatchToProps)(Select)
