@@ -13,8 +13,8 @@ const Select = (props) => {
   }
 
   const options = () => {
-    return props.countries.map((country, index) => {
-      return <option value={country.name} key={index}>{country.name}</option>
+    return props.countries.map((country) => {
+      return <option value={country.name} key={country.alpha3Code}>{country.name}</option>
     })
   }
 

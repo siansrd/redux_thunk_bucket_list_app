@@ -7,11 +7,12 @@ import './BucketList.css';
 const BucketList = (props) => {
 
   const createListItems = () => {
-    return props.listItems.map(country => {
+    return props.listItems.map((country, index) => {
       return <BucketListItem 
         name={ country.name } 
         visited ={ country.visited }
-        onCheck={ (evt) => {props.visitedStatusChange(evt.target.id)} } />
+        onCheck={ (evt) => {props.visitedStatusChange(evt.target.id)} } 
+        key={ index } />
     })
   }
 
