@@ -20,7 +20,7 @@ const BucketList = ({ country, listItems, visitedStatusChange }) => {
     <h5>Nothing in your list</h5> : 
     <ul className="bucket-list">{ createListItems() }</ul>
 
-}
+};
 
 const mapDispatchToProps = dispatch => ({
   visitedStatusChange(countryName) {

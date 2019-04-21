@@ -13,18 +13,17 @@ const Select = (props) => {
   };
 
   const options = () => {
-    return props.countries.map((country) => {
-      return <option value={country.name} key={country.alpha3Code}>{country.name}</option>
-    });
+    return props.countries.map(country => (
+      <option value={country.name} key={country.alpha3Code}>{country.name}</option>
+    ));
   };
 
   return (
-    <select onChange={ evt => handleChange(evt) } value={ selected } >
+    <select onChange={evt => handleChange(evt)} value={selected}>
       <option value="" disabled />
       { options() }
     </select>
   );
-
 };
 
 const mapDispatchToProps = dispatch => ({

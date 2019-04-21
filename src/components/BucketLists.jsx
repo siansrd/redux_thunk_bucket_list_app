@@ -11,7 +11,6 @@ const BucketLists = ({ notVisited, visited }) => (
   </>
 );
 
-
 const mapStateToProps = state => ({
   visited: state.bucketList.filter(item => item.visited === true),
   notVisited: state.bucketList.filter(item => item.visited === false),
