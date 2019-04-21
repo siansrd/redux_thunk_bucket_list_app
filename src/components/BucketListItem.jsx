@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './BucketListItem.css';
 
 const BucketListItem = ({ name, visited, onCheck }) => (
@@ -14,5 +15,10 @@ const BucketListItem = ({ name, visited, onCheck }) => (
   </li>
 );
 
-
 export default BucketListItem;
+
+BucketListItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  visited: PropTypes.bool.isRequired,
+  onCheck: PropTypes.func.isRequired,
+};
