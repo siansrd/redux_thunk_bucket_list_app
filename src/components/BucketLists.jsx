@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import BucketList from './BucketList';
 
 const BucketLists = ({ notVisited, visited }) => (
@@ -16,5 +17,9 @@ const mapStateToProps = state => ({
   notVisited: state.bucketList.filter(item => item.visited === false),
 });
 
-
 export default connect(mapStateToProps)(BucketLists);
+
+BucketLists.propTypes = {
+  notVisited: PropTypes.arrayOf(PropTypes.object).isRequired,
+  visited: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
