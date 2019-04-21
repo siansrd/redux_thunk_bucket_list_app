@@ -9,17 +9,14 @@ class BucketList extends Component {
   constructor() {
     super();
     this.createListItems = this.createListItems.bind(this);
-    this.visitedStatusChange = this.visitedStatusChange.bind(this);
   }
 
   createListItems() {
     return this.props.listItems.map(country => {
-      return <BucketListItem country={ country } onCheck={ this.visitedStatusChange } />
+      return <BucketListItem 
+        country={ country } 
+        onCheck={ (evt) => {this.props.visitedStatusChange(evt.target.id)} } />
     })
-  }
-
-  visitedStatusChange(evt) {
-    this.props.visitedStatusChange(evt.target.id);
   }
 
   render() {
