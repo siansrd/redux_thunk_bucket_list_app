@@ -17,7 +17,7 @@ class App extends Component {
       <>
         <h1>Bucket List</h1>
         <h3>All the places you want to go before you die</h3>
-        <WithCountriesData component={Select} />
+        <WithCountriesData Component={Select} />
         <BucketLists />
       </>
     );

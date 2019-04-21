@@ -4,14 +4,14 @@ import BucketListItem from './BucketListItem';
 import { toggleVisitedStatus } from '../actions/bucketListActions';
 import './BucketList.css';
 
-const BucketList = ({ country, listItems }) => {
+const BucketList = ({ country, listItems, visitedStatusChange }) => {
 
   const createListItems = () => {
-    return props.listItems.map((country, index) => {
+    return listItems.map((country, index) => {
       return <BucketListItem 
         name={ country.name } 
         visited ={ country.visited }
-        onCheck={ (evt) => {props.visitedStatusChange(evt.target.id)} } 
+        onCheck={ (evt) => {visitedStatusChange(evt.target.id)} } 
         key={ index } />
     })
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import BucketList from './BucketList.js';
+import BucketList from './BucketList';
 
 const BucketLists = ({ notVisited, visited }) => {
   
