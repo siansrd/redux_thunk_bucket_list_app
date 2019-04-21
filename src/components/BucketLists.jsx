@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BucketList from './BucketList.js';
 
-const BucketLists = (props) => {
+const BucketLists = ({ notVisited, visited }) => {
   
   return <>
     <h2>Still to Visit</h2>
-    <BucketList listItems={ props.notVisited } />
+    <BucketList listItems={ notVisited } />
     <h2>Visited</h2>
-    <BucketList listItems={ props.visited } />
+    <BucketList listItems={ visited } />
   </>
 
 }

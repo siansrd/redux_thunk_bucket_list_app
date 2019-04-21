@@ -8,7 +8,8 @@ import Select from './components/Select';
 class App extends Component {
 
   componentDidMount() {
-    this.props.onPageLoad()
+    const { onPageLoad } = this.props;
+    onPageLoad();
   }
 
   render() {
