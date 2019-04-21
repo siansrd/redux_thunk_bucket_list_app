@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BucketList from './BucketList';
 
-const BucketLists = ({ notVisited, visited }) => {
-  
-  return <>
+const BucketLists = ({ notVisited, visited }) => (
+  <>
     <h2>Still to Visit</h2>
-    <BucketList listItems={ notVisited } />
+    <BucketList listItems={notVisited} />
     <h2>Visited</h2>
-    <BucketList listItems={ visited } />
+    <BucketList listItems={visited} />
   </>
+);
 
-};
 
-const mapStateToProps = state => {
-  return {
-    visited: state.bucketList.filter(item => item.visited === true),
-    notVisited: state.bucketList.filter(item => item.visited === false)
-  };
-};
+const mapStateToProps = state => ({
+  visited: state.bucketList.filter(item => item.visited === true),
+  notVisited: state.bucketList.filter(item => item.visited === false),
+});
+
 
 export default connect(mapStateToProps)(BucketLists);

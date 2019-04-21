@@ -5,15 +5,15 @@ import { toggleVisitedStatus } from '../actions/bucketListActions';
 import './BucketList.css';
 
 const BucketList = ({ country, listItems, visitedStatusChange }) => {
-
   const createListItems = () => {
-    return listItems.map((country, index) => {
-      return <BucketListItem 
-        name={ country.name } 
-        visited ={ country.visited }
-        onCheck={ (evt) => {visitedStatusChange(evt.target.id)} } 
-        key={ index } />
-    });
+    return listItems.map((country, index) => (
+      <BucketListItem
+        name={country.name}
+        visited={country.visited}
+        onCheck={evt => visitedStatusChange(evt.target.id)}
+        key={index} 
+      />
+    ));
   };
 
   return listItems.length === 0 ? 
