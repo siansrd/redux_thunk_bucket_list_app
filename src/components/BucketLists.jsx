@@ -11,13 +11,13 @@ const BucketLists = ({ notVisited, visited }) => {
     <BucketList listItems={ visited } />
   </>
 
-}
+};
 
 const mapStateToProps = state => {
   return {
     visited: state.bucketList.filter(item => item.visited === true),
     notVisited: state.bucketList.filter(item => item.visited === false)
-  }
+  };
 };
 
 export default connect(mapStateToProps)(BucketLists);

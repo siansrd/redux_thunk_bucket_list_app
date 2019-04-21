@@ -14,7 +14,7 @@ const BucketListItem = ({ name, visited, onCheck }) => {
       />
       <p className="country-name">{ name }</p>
     </li>
-  )
-}
+  );
+};
 
 export default BucketListItem;

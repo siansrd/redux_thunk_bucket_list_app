@@ -4,28 +4,28 @@ import { addToBucketList } from '../actions/bucketListActions';
 
 const Select = (props) => {
 
-  const [selected, setSelected] = useState("")
+  const [selected, setSelected] = useState("");
 
   const handleChange = (evt) => {
     const country = evt.target.value
     setSelected(country)
     props.countrySelected(country)
-  }
+  };
 
   const options = () => {
     return props.countries.map((country) => {
       return <option value={country.name} key={country.alpha3Code}>{country.name}</option>
-    })
-  }
+    });
+  };
 
   return (
     <select onChange={ evt => handleChange(evt) } value={ selected } >
-      <option value="" disabled ></option>
+      <option value="" disabled />
       { options() }
     </select>
-  )
+  );
 
-}
+};
 
 const mapDispatchToProps = dispatch => ({
   countrySelected(countryName) {

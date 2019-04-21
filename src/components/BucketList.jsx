@@ -13,8 +13,8 @@ const BucketList = ({ country, listItems, visitedStatusChange }) => {
         visited ={ country.visited }
         onCheck={ (evt) => {visitedStatusChange(evt.target.id)} } 
         key={ index } />
-    })
-  }
+    });
+  };
 
   return listItems.length === 0 ? 
     <h5>Nothing in your list</h5> : 
