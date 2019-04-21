@@ -9,7 +9,8 @@ const BucketList = (props) => {
   const createListItems = () => {
     return props.listItems.map(country => {
       return <BucketListItem 
-        country={ country } 
+        name={ country.name } 
+        visited ={ country.visited }
         onCheck={ (evt) => {props.visitedStatusChange(evt.target.id)} } />
     })
   }
