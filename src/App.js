@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { getCountriesData } from './actions/countriesDataActions';
 import BucketLists from './components/BucketLists.js';
-import Select from './components/Select';
+import WithCountriesData from './components/WithCountriesData';
 import { connect } from 'react-redux';
+import Select from './components/Select';
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
       <>
         <h1>Bucket List</h1>
         <h3>All the places you want to go before you die</h3>
-        <Select />
+        <WithCountriesData component={Select} />
         <BucketLists />
       </>
     );
