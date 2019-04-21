@@ -1,12 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const WithCountriesData = (props) => {
   const { Component, countries } = props;
-  return <Component {...props} />;
+  return <Component {...props} countries={countries} />;
 };
 
 
 const mapStateToProps = state => ({ countries: state.countriesData });
 
 export default connect(mapStateToProps)(WithCountriesData);
+
+WithCountriesData.propTypes = {
+  Component: PropTypes.func.isRequired,
+  countries: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
