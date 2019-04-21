@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BucketList from './BucketList.js';
 
-class BucketLists extends Component {
-
-  render() {
+const BucketLists = (props) => {
   
-    return <>
-      <h2>Still to Visit</h2>
-      <BucketList listItems={ this.props.notVisited } />
-      <h2>Visited</h2>
-      <BucketList listItems={ this.props.visited } />
-    </>
-  }
+  return <>
+    <h2>Still to Visit</h2>
+    <BucketList listItems={ props.notVisited } />
+    <h2>Visited</h2>
+    <BucketList listItems={ props.visited } />
+  </>
 
 }
 
