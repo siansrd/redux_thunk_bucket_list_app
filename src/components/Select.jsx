@@ -4,7 +4,7 @@ import { addToBucketList } from '../actions/bucketListActions';
 
 const Select = (props) => {
 
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState('');
 
   const handleChange = (evt) => {
     const country = evt.target.value
