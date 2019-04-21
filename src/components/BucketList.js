@@ -6,11 +6,6 @@ import './BucketList.css';
 
 class BucketList extends Component {
 
-  constructor() {
-    super();
-    this.createListItems = this.createListItems.bind(this);
-  }
-
   createListItems() {
     return this.props.listItems.map(country => {
       return <BucketListItem 
