@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addToBucketList } from '../actions/bucketListActions';
 
-const Select = (props) => {
-
+const Select = ({ countries, countrySelected }) => {
   const [selected, setSelected] = useState('');
 
   const handleChange = (evt) => {
     const country = evt.target.value;
     setSelected(country);
-    props.countrySelected(country);
+    countrySelected(country);
   };
 
-  const options = () => {
-    return props.countries.map(country => (
+  const options = () => (
+    countries.map(country => (
       <option value={country.name} key={country.alpha3Code}>{country.name}</option>
-    ));
-  };
+    ))
+  );
 
   return (
     <select onChange={evt => handleChange(evt)} value={selected}>
@@ -33,3 +33,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(Select);
+
+Select.propTypes = {
+  countries: PropTypes.arrayOf(PropTypes.object).isRequired,
+  countrySelected: PropTypes.func.isRequired,
+};
