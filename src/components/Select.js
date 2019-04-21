@@ -19,8 +19,8 @@ const Select = (props) => {
   }
 
   return (
-    <select onChange={ evt => handleChange(evt) } value={ selected }>
-      <option value="" selected disabled ></option>
+    <select onChange={ evt => handleChange(evt) } value={ selected } >
+      <option value="" disabled ></option>
       { options() }
     </select>
   )
