@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getCountriesData } from './actions/countriesDataActions';
-import BucketLists from './components/BucketLists.js';
+import BucketLists from './components/BucketLists';
 import WithCountriesData from './components/WithCountriesData';
 import { connect } from 'react-redux';
 import Select from './components/Select';

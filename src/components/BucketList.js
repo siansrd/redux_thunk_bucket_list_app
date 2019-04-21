@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import BucketListItem from './BucketListItem.js';
+import BucketListItem from './BucketListItem';
 import { toggleVisitedStatus } from '../actions/bucketListActions';
 import './BucketList.css';
 

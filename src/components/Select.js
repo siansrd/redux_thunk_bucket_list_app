@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addToBucketList } from '../actions/bucketListActions.js';
+import { addToBucketList } from '../actions/bucketListActions';
 
 const Select = (props) => {
 
