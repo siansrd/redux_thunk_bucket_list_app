@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import BucketListItem from './BucketListItem';
 import { toggleVisitedStatus } from '../actions/bucketListActions';
 import './BucketList.css';
 
-const BucketList = ({ country, listItems, visitedStatusChange }) => {
+const BucketList = ({ listItems, visitedStatusChange }) => {
   const createListItems = () => {
     return listItems.map((country, index) => (
       <BucketListItem
@@ -29,3 +30,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(BucketList);
+
+BucketList.propTypes = {
+  country: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    visited: PropTypes.bool.isRequired,
+  }).isRequired,
+  listItems: PropTypes.func.isRequired,
+  visitedStatusChange: PropTypes.bool.isRequired,
+};
