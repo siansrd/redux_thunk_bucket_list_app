@@ -8,10 +8,6 @@ const WithCountriesData = (props) => {
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    countries: state.countriesData
-  }
-} 
+const mapStateToProps = state => ({ countries: state.countriesData });
 
 export default connect(mapStateToProps)(WithCountriesData)

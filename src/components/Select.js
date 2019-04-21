@@ -29,8 +29,8 @@ const Select = (props) => {
 
 const mapDispatchToProps = dispatch => ({
   countrySelected(countryName) {
-    dispatch(addToBucketList({name: countryName, visited: false}))
-  }
-})
+    dispatch(addToBucketList({ name: countryName, visited: false }));
+  },
+});
 
 export default connect(null, mapDispatchToProps)(Select)

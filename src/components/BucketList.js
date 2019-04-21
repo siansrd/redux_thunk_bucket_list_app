@@ -24,8 +24,8 @@ const BucketList = (props) => {
 
 const mapDispatchToProps = dispatch => ({
   visitedStatusChange(countryName) {
-    dispatch(toggleVisitedStatus(countryName))
-  }
-})
+    dispatch(toggleVisitedStatus(countryName));
+  },
+});
 
 export default connect(null, mapDispatchToProps)(BucketList);

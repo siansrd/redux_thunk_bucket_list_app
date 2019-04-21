@@ -25,8 +25,8 @@ class App extends Component {
 
 const mapDispatchToProps = dispatch => ({
   onPageLoad() {
-    dispatch(getCountriesData())
-  }
-})
+    dispatch(getCountriesData());
+  },
+});
 
 export default connect(null, mapDispatchToProps)(App);
