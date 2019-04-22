@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const WithCountriesData = (props) => {
-  const { Component, countries } = props;
+  const { component: Component, countries } = props;
   return <Component {...props} countries={countries} />;
 };
 
