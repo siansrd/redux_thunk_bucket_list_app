@@ -29,10 +29,9 @@ const mapDispatchToProps = dispatch => ({
 export default connect(null, mapDispatchToProps)(BucketList);
 
 BucketList.propTypes = {
-  country: PropTypes.shape({
+  listItems: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     visited: PropTypes.bool.isRequired,
-  }).isRequired,
-  listItems: PropTypes.func.isRequired,
-  visitedStatusChange: PropTypes.bool.isRequired,
+  }).isRequired),
+  visitedStatusChange: PropTypes.func.isRequired,
 };
