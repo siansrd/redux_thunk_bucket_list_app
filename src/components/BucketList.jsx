@@ -32,6 +32,6 @@ BucketList.propTypes = {
   listItems: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     visited: PropTypes.bool.isRequired,
-  }).isRequired),
+  }).isRequired).isRequired,
   visitedStatusChange: PropTypes.func.isRequired,
 };
