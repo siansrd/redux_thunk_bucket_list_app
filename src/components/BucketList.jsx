@@ -6,12 +6,12 @@ import { toggleVisitedStatus } from '../actions/bucketListActions';
 import './BucketList.css';
 
 const BucketList = ({ listItems, visitedStatusChange }) => {
-  const createListItems = () => (listItems.map((country, index) => (
+  const createListItems = () => (listItems.map(country => (
     <BucketListItem
       name={country.name}
       visited={country.visited}
       onCheck={evt => visitedStatusChange(evt.target.id)}
-      key={index} 
+      key={country.name}
     />
   )));
 
