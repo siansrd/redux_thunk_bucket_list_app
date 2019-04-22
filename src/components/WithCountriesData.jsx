@@ -12,6 +12,6 @@ const mapStateToProps = state => ({ countries: state.countriesData });
 export default connect(mapStateToProps)(WithCountriesData);
 
 WithCountriesData.propTypes = {
-  Component: PropTypes.func.isRequired,
+  component: PropTypes.func.isRequired,
   countries: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
