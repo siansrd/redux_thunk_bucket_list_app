@@ -7,7 +7,6 @@ const WithCountriesData = (props) => {
   return <Component {...props} countries={countries} />;
 };
 
-
 const mapStateToProps = state => ({ countries: state.countriesData });
 
 export default connect(mapStateToProps)(WithCountriesData);
