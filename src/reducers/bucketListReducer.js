@@ -4,7 +4,9 @@ const bucketListReducer = (state = [], action) => {
       return [...state, action.country];
     case 'TOGGLE_VISITED_STATUS':
       return state.map((item) => {
-        if (action.countryName === item.name) item.visited = !item.visited;
+        if (action.countryName === item.name) {
+          return { ...item, visited: !item.visited };
+        }
         return item;
       });
     default:
